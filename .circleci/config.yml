@@ -16,6 +16,6 @@ jobs:
           command:
             gradle jar
       - store_artifacts:
-          path: /code/test-results
+          path: build/libs
           destination: prefix
  
