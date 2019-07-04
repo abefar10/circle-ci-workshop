@@ -8,9 +8,8 @@ jobs:
       - run:
           name: The First Step
           command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
             gradle test
+
       - store_test_results:
     	  path: test-results
 
