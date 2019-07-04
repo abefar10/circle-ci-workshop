@@ -11,7 +11,7 @@ jobs:
             gradle test
       - store_test_results:
           path: build/test-results
-  package:
+  jarjar:
     docker:
       - image: circleci/openjdk:8-jdk
       - run:
@@ -27,7 +27,7 @@ workflows:
   two_job_flow:
     jobs:
       - test
-      - package:
+      - jarjar:
           requires:
             - test
  
