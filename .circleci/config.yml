@@ -27,7 +27,7 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run: docker login -u $USERNAME -p $PASSWORD
+      - run: docker login -u $USER_NAME -p $PASSWORD
 
 
 workflows:
