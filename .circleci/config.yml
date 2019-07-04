@@ -14,6 +14,8 @@ jobs:
   jarjar:
     docker:
       - image: circleci/openjdk:8-jdk
+    steps:
+      - checkout:
       - run:
           name: jar
           command:
