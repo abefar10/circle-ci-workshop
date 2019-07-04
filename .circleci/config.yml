@@ -29,8 +29,9 @@ jobs:
       - checkout
       - run: docker login -u $USER_NAME -p $PASSWORD
       - run: docker build -t $USER_NAME/app:$CIRCLE_SHA1 .
+      - run: docker tag $USER_NAME/app:$CIRCLE_SHA1 $USER_NAME/app:latest 
       - run: docker push $USER_NAME/app:$CIRCLE_SHA1
-
+      - run: docker push $USER_NAME/app:latest
 
 workflows:
   version: 2
