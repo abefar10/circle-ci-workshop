@@ -28,7 +28,7 @@ jobs:
     steps:
       - checkout
       - run: docker login -u $USER_NAME -p $PASSWORD
-      - run: docker build -t $USER_NAME/app:$CIRCLE_SHA1 Docker/
+      - run: docker build -t $USER_NAME/app:$CIRCLE_SHA1 .
       - run: docker push $USER_NAME/app:$CIRCLE_SHA1
 
 
